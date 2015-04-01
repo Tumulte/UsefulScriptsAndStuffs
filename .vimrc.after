@@ -1,0 +1,40 @@
+let g:syntastic_php_phpcs_args="--report=csv --standard=PSR2"
+
+
+colorscheme wombat256
+nmap <F9> <C-]>
+map! <F9> <C-]>
+" map each number to its shift-key character
+nmap & 1
+nmap é 2
+nmap " 3
+nmap ' 4
+nmap ( 5
+nmap - 6
+nmap è 7
+nmap _ 8
+nmap à 0
+nmap ; .
+
+set wrap               " soft-wrap lines
+
+" requires +linebreak compile-time option (not in the 'tiny' and 'small' builds); check your :version
+set showbreak=\\   " prefix for soft-wrapped lines (no actual line break character)
+"set linebreak          " soft-wrap lines only at certain characters (see :help breakat)
+
+" If you like line numbers, you may want this instead:
+"set number
+"set showbreak=------>\  " line up soft-wrap prefix with the line numbers
+"set cpoptions+=n        " start soft-wrap lines (and any prefix) in the line-number area
+let g:SuperTabDefaultCompletionType = "context"
+
+au BufRead,BufNewFile *.kv set ft=kivy
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+let g:easytags_auto_update = 0
+
+source /usr/share/vim/addons/plugin/powerline.vim

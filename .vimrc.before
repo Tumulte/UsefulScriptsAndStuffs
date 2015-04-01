@@ -1,0 +1,11 @@
+let g:syntastic_php_phpcs_args="--standard=PSR2"
+
+"let NERDTreeShowHidden=1
+
+
+
+" Always show statusline
+set laststatus=2
+
+" Use 256 colours (Use this setting only if your terminal supports 256 colours)
+set t_Co=256
