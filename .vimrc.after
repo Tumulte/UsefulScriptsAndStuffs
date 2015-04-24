@@ -1,3 +1,8 @@
+autocmd filetype css setlocal equalprg=csstidy\ -\ --silent=true\ --template=low
+
+let g:syntastic_check_on_open=1
+let g:syntastic_javascript_checkers = ["jshint"]
+let g:syntastic_javascript_jshint_exec = "/usr/local/lib/node_modules/jshint"
 let g:syntastic_php_phpcs_args="--report=csv --standard=PSR2"
 
 
@@ -7,7 +12,6 @@ map! <F9> <C-]>
 " map each number to its shift-key character
 nmap & 1
 nmap é 2
-nmap " 3
 nmap ' 4
 nmap ( 5
 nmap - 6
@@ -37,4 +41,13 @@ set expandtab
 
 let g:easytags_auto_update = 0
 
-source /usr/share/vim/addons/plugin/powerline.vim
+if filereadable("/usr/share/vim/addons/plugin/powerline.vim")
+    source /usr/share/vim/addons/plugin/powerline.vim
+else
+    python from powerline.vim import setup as powerline_setup
+    python powerline_setup()
+    python del powerline_setup
+endif
+if filereadable(".vimrc.custom")
+    source .vimrc.custom
+endif

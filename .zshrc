@@ -1,4 +1,10 @@
-source /usr/share/zsh-antigen/antigen.zsh
+if [ -f '/usr/share/zsh-antigen/antigen.zsh' ]
+then
+    source /usr/share/zsh-antigen/antigen.zsh
+else
+    source $HOME/.antigen/antigen.zsh
+fi
+
 export LANG=fr_FR.UTF-8
 alias ll="ls -la"
 #git les commandes courantes en quelques lettres :
@@ -32,7 +38,12 @@ precmd()
 }
 autoload -U bashcompinit
 bashcompinit
-source /home/tumulte/.cdargs-zsh.sh
+if [ -f '/home/tumulte/.cdargs-zsh.sh' ]
+then
+    source /home/tumulte/.cdargs-zsh.sh
+else
+    source /home/erouge/.cdargs-zsh.sh
+fi
 
 PERL_MB_OPT="--install_base \"/home/dev/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/dev/perl5"; export PERL_MM_OPT;

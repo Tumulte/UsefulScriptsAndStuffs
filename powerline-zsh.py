@@ -125,9 +125,17 @@ def add_cwd_segment(powerline, cwd, maxdepth, cwd_only=False):
     if cwd[0] == '/':
         cwd = cwd[1:]
 
-    names = cwd.split('/')
-    if len(names) > maxdepth:
-        names = names[:2] + ['⋯ '] + names[2 - maxdepth:]
+    path = cwd.split('/')
+    names = []
+    minified_path = ''
+    if len(path) > maxdepth:
+        for path_item in path[3:-2]:
+            minified_path += '/'+path_item[:6]
+        names.append(minified_path)
+        names = names + path[-2:]
+    else:
+        for path_item in path:
+            names.append(path_item)
 
     if not cwd_only:
         for n in names[:-1]:
