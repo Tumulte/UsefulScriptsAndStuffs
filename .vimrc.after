@@ -1,14 +1,19 @@
+au BufRead,BufNewFile *.tpl set filetype=html
 autocmd filetype css setlocal equalprg=csstidy\ -\ --silent=true\ --template=low
 
 let g:syntastic_check_on_open=1
-let g:syntastic_javascript_checkers = ["jshint"]
-let g:syntastic_javascript_jshint_exec = "/usr/local/lib/node_modules/jshint"
+let g:syntastic_javascript_jshint_exec = "/usr/local/bin/jshint"
+let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_php_phpcs_args="--report=csv --standard=PSR2"
 
 
-colorscheme wombat256
+colorscheme xoria256
 nmap <F9> <C-]>
 map! <F9> <C-]>
+nmap <C-F9> :e#<CR>
+map! <C-F9> :e#<CR>
+
+map AutotagsUpdate <F2>
 " map each number to its shift-key character
 nmap & 1
 nmap é 2

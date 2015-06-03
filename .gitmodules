@@ -1,0 +1,6 @@
+[submodule ".janus/vim-autotags"]
+	path = .janus/vim-autotags
+	url = https://github.com/basilgor/vim-autotags.git
+[submodule ".janus/smarty.vim"]
+	path = .janus/smarty.vim
+	url = https://github.com/vim-scripts/smarty.vim.git
