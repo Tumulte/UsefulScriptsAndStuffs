@@ -4,3 +4,9 @@
 [submodule ".janus/smarty.vim"]
 	path = .janus/smarty.vim
 	url = https://github.com/vim-scripts/smarty.vim.git
+[submodule ".janus/phpcomplete.vim"]
+	path = .janus/phpcomplete.vim
+	url = https://github.com/shawncplus/phpcomplete.vim.git
+[submodule ".janus/YouCompleteMe"]
+	path = .janus/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
