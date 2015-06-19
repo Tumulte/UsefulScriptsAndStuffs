@@ -13,7 +13,8 @@ map! <F9> <C-]>
 nmap <C-F9> :e#<CR>
 map! <C-F9> :e#<CR>
 
-map AutotagsUpdate <F2>
+set pastetoggle=<F2>
+
 " map each number to its shift-key character
 nmap & 1
 nmap é 2
