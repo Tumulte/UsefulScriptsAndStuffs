@@ -10,3 +10,6 @@
 [submodule ".janus/YouCompleteMe"]
 	path = .janus/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule ".janus/tern_for_vim"]
+	path = .janus/tern_for_vim
+	url = https://github.com/marijnh/tern_for_vim.git
